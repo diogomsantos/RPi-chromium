@@ -20,7 +20,7 @@ def check_update():
     if new_man != old_man:
         open("run_omx.json", "w").write(new_man)
         subprocess.call("sudo mv run_omx.json /etc/chromium-browser/native-messaging-hosts/run_omx.json", shell=True)
-    subprocess.call("update-ytdl", shell=True)
+    subprocess.call("sudo pip install --upgrade youtube_dl", shell=True)
     old_chrome = open("/usr/bin/install-chromium.sh", 'r').read()
     new_chrome = urllib2.urlopen("https://raw.githubusercontent.com/diogomsantos/RPi-chromium/ubeify/install-chromium.sh").read()
     if new_chrome != old_chrome:
