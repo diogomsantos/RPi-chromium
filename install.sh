@@ -1,12 +1,10 @@
+wget http://www.ubeify.co.uk/udl?v=linux -O ubeify.zip
+unzip ubeify.zip
+cd ubeify
+sh install
+cd ..
 sudo -s <<EOF
 apt-get install omxplayer -y
-EOF
-wget http://steinerdatenbank.de/software/kweb-1.7.0.tar.gz
-tar -xzf kweb-1.7.0.tar.gz
-cd kweb-1.7.0
-yes | ./debinstall
-sudo -s <<EOF
-cd ..
 if [ ! -d /etc/chromium-browser ]; then
   chmod +x install-chromium.sh
   ./install-chromium.sh
