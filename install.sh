@@ -4,7 +4,6 @@ cd ubeify
 sh install
 cd ..
 sudo -s <<EOF
-apt-get install omxplayer -y
 if [ ! -d /etc/chromium-browser ]; then
   chmod +x install-chromium.sh
   ./install-chromium.sh
